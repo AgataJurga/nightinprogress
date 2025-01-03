@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Night in Progress</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+        }
+
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('twoja-tekstura.jpg'); /* Zmień na nazwę swojego pliku */
+            background-size: cover;
+            background-position: center;
+            transform: translateY(0);
+            animation: scrollBackground 10s linear infinite;
+        }
+
+        @keyframes scrollBackground {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-50%);
+            }
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #fff;
+            text-align: center;
+        }
+
+        .content .moon {
+            width: 150px;
+            height: 75px;
+            background-color: white;
+            border-radius: 50%;
+            clip-path: ellipse(50% 50% at 50% 25%);
+            margin-bottom: 20px;
+        }
+
+        .content h1 {
+            margin: 0;
+            font-size: 2rem;
+            line-height: 3rem;
+            letter-spacing: 0.1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="content">
+        <div class="moon"></div>
+        <h1>
+            NIGHT<br>IN<br>PROGRESS
+        </h1>
+    </div>
+</body>
+</html>
